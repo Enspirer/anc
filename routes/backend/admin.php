@@ -3,11 +3,27 @@
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\FileManagerController;
 use App\Http\Controllers\Backend\SettingsController;
+use App\Http\Controllers\Backend\PackageController;
+use App\Http\Controllers\Backend\OrderController;
 
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+Route::get('package', [PackageController::class, 'index'])->name('package.index');
+Route::get('package/create', [PackageController::class, 'create'])->name('package.create');
+Route::post('package/store', [PackageController::class, 'store'])->name('package.store');
+Route::get('package/getdetails', [PackageController::class, 'getdetails'])->name('package.getdetails');
+Route::get('package/edit/{id}', [PackageController::class, 'edit'])->name('package.edit');
+Route::post('package/update', [PackageController::class, 'update'])->name('package.update');
+Route::get('package/delete/{id}', [PackageController::class, 'destroy'])->name('package.destroy');
+
+Route::get('order', [OrderController::class, 'index'])->name('order.index');
+Route::get('order/getdetails', [OrderController::class, 'getdetails'])->name('order.getdetails');
+Route::get('order/edit/{id}', [OrderController::class, 'edit'])->name('order.edit');
+Route::post('order/update', [OrderController::class, 'update'])->name('order.update');
+Route::get('order/print/{id}', [OrderController::class, 'print'])->name('print');
+Route::get('order/delete/{id}', [OrderController::class, 'destroy'])->name('order.destroy');
 
 Route::get('file_manager', [FileManagerController::class, 'index'])->name('file_manager.index');
 Route::get('file_manager/getdetails', [FileManagerController::class, 'getdetails'])->name('file_manager.getdetails');

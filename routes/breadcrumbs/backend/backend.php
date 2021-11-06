@@ -7,6 +7,26 @@ Breadcrumbs::for('admin.dashboard', function ($trail) {
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';
 
+Breadcrumbs::for('admin.package.index', function ($trail) {
+    $trail->push('Package', route('admin.package.index'));
+});
+Breadcrumbs::for('admin.package.create', function ($trail) {
+    $trail->push('Create Package', route('admin.package.create'));
+});
+Breadcrumbs::for('admin.package.edit', function ($trail) {
+    $trail->push('Edit Package', route('admin.package.edit',1));
+});
+
+Breadcrumbs::for('admin.order.index', function ($trail) {
+    $trail->push('Orders', route('admin.order.index'));
+});
+Breadcrumbs::for('admin.order.edit', function ($trail) {
+    $trail->push('Order Approval', route('admin.order.edit',1));
+});
+Breadcrumbs::for('admin.print', function ($trail) {
+    $trail->push('Order Print', route('admin.print',1));
+});
+
 Breadcrumbs::for('admin.file_manager.index', function ($trail) {
     $trail->push('File Manager', route('admin.file_manager.index'));
 });
