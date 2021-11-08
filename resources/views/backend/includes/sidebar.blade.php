@@ -34,6 +34,13 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link {{active_class(Route::is('admin/inquire'))}}" href="{{ route('admin.inquire.index') }}">
+                <i class="nav-icon far fa-question-circle"></i>
+                    Inquire
+                </a>
+            </li>
+
             @if ($logged_in_user->isAdmin())
                 <li class="nav-title">
                     @lang('menus.backend.sidebar.system')

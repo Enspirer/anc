@@ -107,7 +107,7 @@
                      <strong class="text-inverse" style="border-bottom:1px solid #23282c;">Order Information</strong><br>
                         <table class="mt-3" width="380px">
                            <tr>
-                              <td><h6 class="text-inverse">From:</h6></td>
+                              <td><h6 class="text-inverse">Package Name:</h6></td>
                               <td>
                                  <h6 class="text-inverse">
                                  @if(App\Models\Package::where('id',$order->package_id)->first() == null)

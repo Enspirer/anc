@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\FileManagerController;
 use App\Http\Controllers\Backend\SettingsController;
 use App\Http\Controllers\Backend\PackageController;
 use App\Http\Controllers\Backend\OrderController;
+use App\Http\Controllers\Backend\InquireController;
 
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
@@ -29,6 +30,11 @@ Route::get('file_manager', [FileManagerController::class, 'index'])->name('file_
 Route::get('file_manager/getdetails', [FileManagerController::class, 'getdetails'])->name('file_manager.getdetails');
 Route::get('file_manager/delete/{id}', [FileManagerController::class, 'destroy'])->name('file_manager.destroy');
 
+Route::get('inquire', [InquireController::class, 'index'])->name('inquire.index');
+Route::get('inquire/getdetails', [InquireController::class, 'getdetails'])->name('inquire.getdetails');
+Route::get('inquire/edit/{id}', [InquireController::class, 'edit'])->name('inquire.edit');
+Route::post('inquire/update', [InquireController::class, 'update'])->name('inquire.update');
+Route::get('inquire/delete/{id}', [InquireController::class, 'destroy'])->name('inquire.destroy');
 
 Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
 Route::post('settings/update', [SettingsController::class, 'settings_update'])->name('settings_update');

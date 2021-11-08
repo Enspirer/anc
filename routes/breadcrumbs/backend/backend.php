@@ -31,6 +31,14 @@ Breadcrumbs::for('admin.file_manager.index', function ($trail) {
     $trail->push('File Manager', route('admin.file_manager.index'));
 });
 
+Breadcrumbs::for('admin.inquire.index', function ($trail) {
+    $trail->push('Inquire', route('admin.inquire.index'));
+});
+Breadcrumbs::for('admin.inquire.edit', function ($trail) {
+    $trail->push('View Inquire', route('admin.inquire.edit',1));
+});
+
+
 Breadcrumbs::for('admin.settings.index', function ($trail) {
     $trail->push('General Settings', route('admin.settings.index'));
 });

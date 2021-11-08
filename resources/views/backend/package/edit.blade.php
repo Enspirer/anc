@@ -22,7 +22,7 @@
 
                         <div class="form-group">
                             <label>Description</label>
-                            <textarea class="form-control" name="description" rows="4">{{ $package->description }}</textarea>
+                            <textarea class="form-control" id="editor" name="description" rows="4">{{ $package->description }}</textarea>
                         </div>
 
                         <div class="form-group">
@@ -76,4 +76,18 @@
 
 
 <br><br>
+
+<script>
+	ClassicEditor
+		.create( document.querySelector( '#editor' ), {
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+		} )
+		.then( editor => {
+			window.editor = editor;
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
+</script>
+
 @endsection

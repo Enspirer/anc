@@ -88,7 +88,7 @@
                 <div class="card-box" style="background-color: #487662; border-radius: 15px 15px 15px 15px;">
                     <div class="inner">
                         <h3>{{$package}}</h3>
-                        <p>Package</p>
+                        <p>Packages</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-box-open mb-4 mr-2" aria-hidden="true"></i>
@@ -111,13 +111,13 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="card-box" style="background-color: #92967d; border-radius: 15px 15px 15px 15px;">
                     <div class="inner">
-                        <h3>Lorem</h3>
-                        <p>Lorem Ipsum</p>
+                        <h3>{{$inquire}}</h3>
+                        <p>Inquire</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-building mb-4 mr-2"></i>
+                        <i class="far fa-question-circle mb-4 mr-2"></i>
                     </div>
-                    <a href="" class="card-box-footer" style="border-radius: 0px 0px 15px 15px;">View More <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{url('admin/inquire')}}" class="card-box-footer" style="border-radius: 0px 0px 15px 15px;">View More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         </div>
