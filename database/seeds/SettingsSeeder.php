@@ -128,7 +128,7 @@ class SettingsSeeder extends Seeder
         ->insert(
             [             
             'key' => 'phone_number',
-            'value' => '[{"number1":"0731002003"},{"number2":"0731002004"}]', 
+            'value' => '[{"number":"0731002003"},{"number":"0731002004"}]', 
             'user_id' => 1,
             ]
         ); 
