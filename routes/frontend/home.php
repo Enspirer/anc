@@ -20,7 +20,6 @@ Route::post('solo_package/inquire', [PackageController::class, 'inquire'])->name
 Route::post('solo_package/pay', [PackageController::class, 'pay'])->name('solo_package.pay');
 
 
-Route::post('customize/customize_inquire', [CustomizeInquiryController::class, 'customize_inquire'])->name('customize.customize_inquire');
 Route::post('order/store', [OrderController::class, 'store'])->name('order.store');
 
 

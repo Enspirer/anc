@@ -11,8 +11,6 @@ use \App\Mail\CustomizeInquireMail;
 class CustomizeInquiryController extends Controller
 {
         
-
-
     public function customize_inquire(Request $request)
     {        
         // dd($request);
