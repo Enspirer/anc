@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\SettingsController;
 use App\Http\Controllers\Backend\PackageController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\InquireController;
+use App\Http\Controllers\Backend\CustomizeInquiryController;
 
 // All route names are prefixed with 'admin.'.
 Route::redirect('/', '/admin/dashboard', 301);
@@ -29,6 +30,12 @@ Route::get('order/delete/{id}', [OrderController::class, 'destroy'])->name('orde
 Route::get('file_manager', [FileManagerController::class, 'index'])->name('file_manager.index');
 Route::get('file_manager/getdetails', [FileManagerController::class, 'getdetails'])->name('file_manager.getdetails');
 Route::get('file_manager/delete/{id}', [FileManagerController::class, 'destroy'])->name('file_manager.destroy');
+
+Route::get('customize_inquire', [CustomizeInquiryController::class, 'index'])->name('customize_inquire.index');
+Route::get('customize_inquire/getdetails', [CustomizeInquiryController::class, 'getdetails'])->name('customize_inquire.getdetails');
+Route::get('customize_inquire/edit/{id}', [CustomizeInquiryController::class, 'edit'])->name('customize_inquire.edit');
+Route::post('customize_inquire/update', [CustomizeInquiryController::class, 'update'])->name('customize_inquire.update');
+Route::get('customize_inquire/delete/{id}', [CustomizeInquiryController::class, 'destroy'])->name('customize_inquire.destroy');
 
 Route::get('inquire', [InquireController::class, 'index'])->name('inquire.index');
 Route::get('inquire/getdetails', [InquireController::class, 'getdetails'])->name('inquire.getdetails');

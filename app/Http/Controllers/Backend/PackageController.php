@@ -69,6 +69,9 @@ class PackageController extends Controller
             $add->description=$request->description;        
             $add->image=$request->image;
             $add->price=$request->price;
+            $add->night=$request->night;
+            $add->days=$request->days;
+            $add->category=$request->category;
             $add->status=$request->status;
             $add->order=$request->order;
             $add->save();
@@ -101,6 +104,9 @@ class PackageController extends Controller
             $update->name=$request->name;
             $update->description=$request->description;        
             $update->image=$request->image;
+            $update->night=$request->night;
+            $update->days=$request->days;
+            $update->category=$request->category;
             $update->price=$request->price;
             $update->status=$request->status;
             $update->order=$request->order;

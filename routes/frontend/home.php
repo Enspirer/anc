@@ -7,6 +7,8 @@ use App\Http\Controllers\Frontend\PackageController;
 use App\Http\Controllers\Frontend\User\AccountController;
 use App\Http\Controllers\Frontend\User\DashboardController;
 use App\Http\Controllers\Frontend\User\ProfileController;
+use App\Http\Controllers\Frontend\User\CustomizeInquiryController;
+use App\Http\Controllers\Frontend\User\OrderController;
 
 /*
  * Frontend Controllers
@@ -16,6 +18,10 @@ use App\Http\Controllers\Frontend\User\ProfileController;
 Route::get('solo_package/{id}', [PackageController::class, 'solo_package'])->name('solo_package');
 Route::post('solo_package/inquire', [PackageController::class, 'inquire'])->name('solo_package.inquire');
 Route::post('solo_package/pay', [PackageController::class, 'pay'])->name('solo_package.pay');
+
+
+Route::post('customize/customize_inquire', [CustomizeInquiryController::class, 'customize_inquire'])->name('customize.customize_inquire');
+Route::post('order/store', [OrderController::class, 'store'])->name('order.store');
 
 
 Route::get('/', [HomeController::class, 'index'])->name('index');

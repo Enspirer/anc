@@ -99,13 +99,13 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="card-box" style="background-color: #79a37d; border-radius: 15px 15px 15px 15px;">
                     <div class="inner">
-                        <h3>Lorem</h3>
-                        <p>Lorem Ipsum</p>
+                        <h3>{{$customize_inquiry}}</h3>
+                        <p>Customize Inquiry</p>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-city mb-4 mr-2" aria-hidden="true"></i>
+                        <i class="fas fa-clipboard-list mb-4 mr-2" aria-hidden="true"></i>
                     </div>
-                    <a href="" class="card-box-footer" style="border-radius: 0px 0px 15px 15px;">View More <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="{{url('admin/customize_inquire')}}" class="card-box-footer" style="border-radius: 0px 0px 15px 15px;">View More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">

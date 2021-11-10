@@ -38,6 +38,12 @@ Breadcrumbs::for('admin.inquire.edit', function ($trail) {
     $trail->push('View Inquire', route('admin.inquire.edit',1));
 });
 
+Breadcrumbs::for('admin.customize_inquire.index', function ($trail) {
+    $trail->push('Customize Inquiry', route('admin.customize_inquire.index'));
+});
+Breadcrumbs::for('admin.customize_inquire.edit', function ($trail) {
+    $trail->push('Customize Inquiry Status', route('admin.customize_inquire.edit',1));
+});
 
 Breadcrumbs::for('admin.settings.index', function ($trail) {
     $trail->push('General Settings', route('admin.settings.index'));

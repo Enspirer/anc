@@ -15,19 +15,22 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                    <div class="form-group">
+                        <div class="form-group">
                             <label>Name <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" name="name" value="{{ $package->name }}" required>
                         </div>
 
                         <div class="form-group">
-                            <label>Description</label>
-                            <textarea class="form-control" id="editor" name="description" rows="4">{{ $package->description }}</textarea>
+                            <label>Category <span class="text-danger">*<span></label>
+                            <select class="form-control" name="category" required>
+                                <option value="Inbound" {{ $package->category == 'Inbound' ? "selected" : "" }}>Inbound</option>   
+                                <option value="Outbound" {{ $package->category == 'Outbound' ? "selected" : "" }}>Outbound</option>                                   
+                            </select>
                         </div>
 
                         <div class="form-group">
-                            <label>Price <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" value="{{ $package->price }}" name="price" required>
+                            <label>Description</label>
+                            <textarea class="form-control" id="editor" name="description" rows="4">{{ $package->description }}</textarea>
                         </div>
 
                         <div class="form-group">
@@ -43,8 +46,23 @@
                             </div>
                             <div class="file-preview box sm">
                             </div>
-                        </div> 
+                        </div>
 
+                        <div class="form-group">
+                            <label>Days</label>
+                            <input type="text" class="form-control" name="days" value="{{ $package->days }}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Night</label>
+                            <input type="text" class="form-control" name="night" value="{{ $package->night }}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Price <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" value="{{ $package->price }}" name="price" required>
+                        </div>
+                                                 
                         <div class="form-group">
                             <label>Status <span class="text-danger">*<span></label>
                             <select class="form-control" name="status" required>

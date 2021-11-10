@@ -8,6 +8,8 @@ use DB;
 use App\Models\Package;
 use App\Models\Inquire;
 use App\Models\Order;
+use Mail;  
+use \App\Mail\InquireMail;
 
 class PackageController extends Controller
 {
@@ -40,6 +42,22 @@ class PackageController extends Controller
         $add->budget=$request->budget;        
         $add->status='Pending';
         $add->save();
+
+        $details = [
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'contact_number' => $request->contact_number,
+            'address' => $request->address,
+            'nationality' => $request->nationality,
+            'airlines' => $request->airlines,
+            'hotels' => $request->hotels,
+            'meals' => $request->meals,
+            'special_requirements' => $request->special_requirements,
+            'budget' => $request->budget
+        ];
+
+        \Mail::to([$request->email,'nihsaan.enspirer@gmail.com'])->send(new InquireMail($details));
 
         return back(); 
             

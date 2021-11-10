@@ -11,12 +11,19 @@
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     @lang('menus.backend.sidebar.dashboard')
                 </a>
-            </li>
+            </li>            
 
             <li class="nav-item">
                 <a class="nav-link {{active_class(Route::is('admin/package'))}}" href="{{ route('admin.package.index') }}">
                     <i class="nav-icon fas fa-box-open"></i>
                     Packages
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{active_class(Route::is('admin/customize_inquire'))}}" href="{{ route('admin.customize_inquire.index') }}">
+                <i class="nav-icon fas fa-clipboard-list"></i>
+                    Customize Inquiry
                 </a>
             </li>
 

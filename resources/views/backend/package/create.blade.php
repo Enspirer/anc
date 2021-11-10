@@ -21,13 +21,17 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Description</label>
-                            <textarea class="form-control" id="editor" name="description" rows="4"></textarea>
+                            <label>Category <span class="text-danger">*<span></label>
+                            <select class="form-control" name="category" required>
+                                <option value="" selected disabled>-- select --</option>   
+                                <option value="Inbound">Inbound</option>   
+                                <option value="Outbound">Outbound</option>                                   
+                            </select>
                         </div>
 
                         <div class="form-group">
-                            <label>Price <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="price" required>
+                            <label>Description</label>
+                            <textarea class="form-control" id="editor" name="description" rows="4"></textarea>
                         </div>
 
                         <div class="form-group">
@@ -44,6 +48,21 @@
                             <div class="file-preview box sm">
                             </div>
                         </div> 
+
+                        <div class="form-group">
+                            <label>Days</label>
+                            <input type="text" class="form-control" name="days">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Night</label>
+                            <input type="text" class="form-control" name="night">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Price <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="price" required>
+                        </div>
 
                         <div class="form-group">
                             <label>Status <span class="text-danger">*<span></label>
