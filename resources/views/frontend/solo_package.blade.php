@@ -2,9 +2,13 @@
 
 @section('title', app_name() . ' | ' . __('navs.general.home'))
 
+@push('after-styles')
+    <link href="{{ url('css/solo_package.css') }}" rel="stylesheet">
+@endpush
+
 @section('content')
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-12">
                 <h3>{{$package->name}}</h3>
@@ -21,6 +25,54 @@
                     <input type="hidden" name="hidden_id" value="{{ $package->id }}"/>
                     <button type="button" data-toggle="modal" data-target="#inquire" class="btn text-dark px-4 py-2 me-2 btn-light border-dark">Inquire Now</button>
                     <button type="button"  data-toggle="modal" data-target="#paynow" class="btn text-light px-4 py-2 me-2 btn-success ml-5" >Pay Now</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <img src="{{url( uploaded_asset($package->image) )}}" class="img-fluid w-100" style="object-fit: cover; height: 40rem; "/>
+            </div>
+
+            <div class="col-6 ps-5">
+                <h3 class="fw-bolder" style="color: #E84C4C">{{$package->name}}</h3>
+                <p>{{ $package->days }} Days &nbsp;&nbsp; {{ $package->night }} Nights</p>
+
+
+                <div class="my-4">
+                    <h5 class="mb-3">What's Included</h5>
+
+                    <ul class="included">
+                        <li>Double room in 3* beach hotel</li>
+                        <li>Daily Breakfast and Dinner</li>
+                        <li>Return Speedboat Transfers</li>
+                        <li>Sea water swimming pool</li>
+                        <li>Snorkeling by Dhoni</li>
+                        <li>Kayaking</li>
+                    </ul>
+                </div>
+
+
+                <div class="mb-4">
+                    <h5 class="mb-3">Description / Additional Note</h5>
+                    <div class="ms-4" style="color: rgb(0, 0, 0, 0.6); font-size: 0.8rem;">{!! $package->description !!}</div>
+                </div>
+
+                <div>
+                    <h3 class="mb-4" style="color: #059F05">USD {{$package->price}}</h3>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="inquire">INQUIRE</button>
+                        </div>
+
+                        <div class="col-6">
+                            <button class="pay">PAY NOW</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,31 @@
+.included {
+    list-style-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='-1 -1 2 2'><circle r='1' /></svg>");
+}
+.included {
+    padding-left: 3rem!important;
+}
+.included li {
+    margin-bottom: 0.6rem;
+}
+
+p {
+    font-family: 'Graphik-Regular';
+    font-size: 0.8rem;
+    line-height: 1.5em;
+}
+
+.inquire {
+    border: 1px solid #FF0000;
+    width: 100%;
+    background-color: transparent;
+    color: #FF0000;
+    padding: 0.6rem 0;
+}
+
+.pay {
+    background-color: #FF0000;
+    color: white;
+    padding: 0.6rem 0;
+    width: 100%;
+    border: none!important;
+}
