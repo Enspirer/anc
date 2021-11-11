@@ -129,7 +129,7 @@ class PackageController extends Controller
             array_push($final_array,$item_group);
         }
                 
-        if($package == null){
+        if(count($packages) == 0){
             return null;
         }else{ 
             return $final_array;
