@@ -21,6 +21,6 @@ use App\Http\Controllers\Frontend\PackageController;
 });*/
 
 
-Route::get('package_details/{id}/{name}', [PackageController::class, 'package_details'])->name('package_details');
+Route::get('package_latest', [PackageController::class, 'package_latest'])->name('package_latest');
 
 Route::post('customize/customize_inquire', [CustomizeInquiryController::class, 'customize_inquire'])->name('customize.customize_inquire');

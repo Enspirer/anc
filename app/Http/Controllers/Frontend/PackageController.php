@@ -104,15 +104,16 @@ class PackageController extends Controller
             
     }
 
-    public function package_details($id,$name)
+    public function package_latest()
     {
-        $package = Package::where('id',$id)->where('name',$name)->first(); 
-        // dd($package);   
+        $packages = Package::where('status','Approved')->latest()->take(3)->get(); 
+        // dd($packages); 
+        
+        $final_array = [];
+                    
+        foreach($packages as $key => $package){
                 
-        if($package == null){
-            return null;
-        }else{            
-            return [
+            $item_group = [
                 'id' => $package->id,
                 'name' => $package->name,
                 'price' => $package->price,
@@ -124,6 +125,14 @@ class PackageController extends Controller
                 'order' => $package->order,
                 'image' => uploaded_asset($package->image)
             ];
+                
+            array_push($final_array,$item_group);
+        }
+                
+        if($package == null){
+            return null;
+        }else{ 
+            return $final_array;
         }    
 
     }
