@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Frontend\CustomizeInquiryController;
+use App\Http\Controllers\Frontend\PackageController;
 
 
 /*
@@ -20,7 +21,6 @@ use App\Http\Controllers\Frontend\CustomizeInquiryController;
 });*/
 
 
-
-Route::get('package_details/{id}/{name}', 'Frontend\HomeController@package_details');
+Route::get('package_details/{id}/{name}', [PackageController::class, 'package_details'])->name('package_details');
 
 Route::post('customize/customize_inquire', [CustomizeInquiryController::class, 'customize_inquire'])->name('customize.customize_inquire');

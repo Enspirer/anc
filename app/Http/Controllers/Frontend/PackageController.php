@@ -86,4 +86,28 @@ class PackageController extends Controller
             
     }
 
+    public function package_details($id,$name)
+    {
+        $package = Package::where('id',$id)->where('name',$name)->first(); 
+        // dd($package);   
+                
+        if($package == null){
+            return null;
+        }else{            
+            return [
+                'id' => $package->id,
+                'name' => $package->name,
+                'price' => $package->price,
+                'description' => $package->description,
+                'category' => $package->category,
+                'days' => $package->days,
+                'night' => $package->night,
+                'status' => $package->status,
+                'order' => $package->order,
+                'image' => uploaded_asset($package->image)
+            ];
+        }    
+
+    }
+
 }
