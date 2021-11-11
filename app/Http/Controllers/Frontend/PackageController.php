@@ -119,6 +119,7 @@ class PackageController extends Controller
                 'price' => $package->price,
                 'description' => $package->description,
                 'category' => $package->category,
+                'points' => $package->points,
                 'days' => $package->days,
                 'night' => $package->night,
                 'status' => $package->status,
