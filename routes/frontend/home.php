@@ -15,9 +15,9 @@ use App\Http\Controllers\Frontend\User\OrderController;
  * All route names are prefixed with 'frontend.'.
  */
 
-Route::get('solo_package/{id}', [PackageController::class, 'solo_package'])->name('solo_package');
-Route::post('solo_package/inquire', [PackageController::class, 'inquire'])->name('solo_package.inquire');
-Route::post('solo_package/pay', [PackageController::class, 'pay'])->name('solo_package.pay');
+Route::get('offer/{id}', [PackageController::class, 'offer'])->name('offer');
+Route::post('offer/inquire', [PackageController::class, 'inquire'])->name('offer.inquire');
+Route::post('offer/pay', [PackageController::class, 'pay'])->name('offer.pay');
 
 
 Route::post('order/store', [OrderController::class, 'store'])->name('order.store');

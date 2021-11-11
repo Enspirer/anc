@@ -31,23 +31,23 @@ class CustomizeInquiryController extends Controller
         $add->status='Pending';
         $add->save();
 
-        $details = [
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'email' => $request->email,
-            'phone_number' => $request->phone_number,
-            'address' => $request->address,
-            'activities' => $request->activities,
-            'location' => $request->location,
-            'accommodation' => $request->accommodation,
-            'date_of_start' => $request->date_of_start,
-            'number_of_dates' => $request->number_of_dates,
-            'budget' => $request->budget
-        ];
+        // $details = [
+        //     'first_name' => $request->first_name,
+        //     'last_name' => $request->last_name,
+        //     'email' => $request->email,
+        //     'phone_number' => $request->phone_number,
+        //     'address' => $request->address,
+        //     'activities' => $request->activities,
+        //     'location' => $request->location,
+        //     'accommodation' => $request->accommodation,
+        //     'date_of_start' => $request->date_of_start,
+        //     'number_of_dates' => $request->number_of_dates,
+        //     'budget' => $request->budget
+        // ];
 
-        \Mail::to([$request->email,'nihsaan.enspirer@gmail.com'])->send(new CustomizeInquireMail($details));
+        // \Mail::to([$request->email,'nihsaan.enspirer@gmail.com'])->send(new CustomizeInquireMail($details));
 
-        return back(); 
+        return response()->json(['response' => 'success']);
             
     }
 

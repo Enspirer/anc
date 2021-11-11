@@ -59,14 +59,33 @@ class PackageController extends Controller
     {        
         // dd($request);
 
+        if($request->attribute_name == null){
+            return back()->withErrors('Add atleast one value in Whats Included field');
+        }
+        
         if($request->image == null){
             return back()->withErrors('Select an Image');
         }else{             
 
+            $attribute_name = $request->attribute_name;
+            // dd($attribute_value);
+
+            $final_array = [];
+                    
+            foreach($attribute_name as $key => $name){
+
+                $item_group = [                            
+                    'name' => $name,
+                ];
+
+                array_push($final_array,$item_group);
+            }
+
             $add = new Package;
 
             $add->name=$request->name;
-            $add->description=$request->description;        
+            $add->description=$request->description;  
+            $add->points=json_encode($final_array);      
             $add->image=$request->image;
             $add->price=$request->price;
             $add->night=$request->night;
@@ -94,15 +113,32 @@ class PackageController extends Controller
     public function update(Request $request)
     {    
         // dd($request);
+        
+        if($request->attribute_name == null){
+            return back()->withErrors('Add atleast one value in Whats Included field');
+        }
 
         if($request->image == null){
             return back()->withErrors('Select an Image');
         }else{             
 
+            $attribute_name = $request->attribute_name;
+            // dd($attribute_value);
+
+            $final_array = [];
+                    
+            foreach($attribute_name as $key => $name){
+                $item_group = [                            
+                    'name' => $name,
+                ];
+                array_push($final_array,$item_group);
+            }
+
             $update = new Package;
 
             $update->name=$request->name;
-            $update->description=$request->description;        
+            $update->description=$request->description;   
+            $update->points=json_encode($final_array);      
             $update->image=$request->image;
             $update->night=$request->night;
             $update->days=$request->days;

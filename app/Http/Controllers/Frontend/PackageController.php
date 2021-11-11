@@ -10,14 +10,15 @@ use App\Models\Inquire;
 use App\Models\Order;
 use Mail;  
 use \App\Mail\InquireMail;
+use \App\Mail\OrderMail;
 
 class PackageController extends Controller
 {
-    public function solo_package($id)
+    public function offer($id)
     {
         $package = Package::where('id',$id)->first(); 
 
-        return view('frontend.solo_package',[
+        return view('frontend.offer',[
             'package' => $package
         ]);
     }
@@ -81,6 +82,23 @@ class PackageController extends Controller
         $add->sub_total=$request->sub_total;
         $add->status='Pending';
         $add->save();
+
+        $package =  Package::where('id',$request->package)->first();
+
+        $details = [
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'phone_number' => $request->contact_number,
+            'address' => $request->address,
+            'package_name' => $package->name,
+            'price' => $request->price,
+            'payment_method' => $request->payment_method,
+            'total' => $request->total,
+            'sub_total' => $request->sub_total
+        ];
+
+        \Mail::to([$request->email,'nihsaan.enspirer@gmail.com'])->send(new OrderMail($details));
 
         return back(); 
             

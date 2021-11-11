@@ -156,20 +156,20 @@
                      <strong class="text-inverse" style="border-bottom:1px solid #23282c;">Customer Information</strong><br>
                         <table class="mt-3" width="380px">
                            <tr>
-                              <td><h6 class="text-inverse">Name:</h6></td>
-                              <td><h6 class="text-inverse">{{$details['first_name']}}&nbsp;{{ $details['last_name'] }}</h6></td>
+                              <td><h3 style="margin:0; margin-top:12px;">Name:</h3></td>
+                              <td><h3 style="margin:0; margin-top:12px;">{{$details['first_name']}}&nbsp;{{ $details['last_name'] }}</h4></td>
                            </tr>
                            <tr>
-                              <td><h6 class="text-inverse">Email:</td>
-                              <td><h6 class="text-inverse">{{$details['email']}}</h6></td>
+                              <td><h3 style="margin:0; margin-top:12px;">Email:</td>
+                              <td><h3 style="margin:0; margin-top:12px;">{{$details['email']}}</h3></td>
                            </tr>
                            <tr>
-                              <td><h6 class="text-inverse">Phone:</td>
-                              <td><h6 class="text-inverse">{{ $details['phone_number']}}</h6></td>
+                              <td><h3 style="margin:0; margin-top:12px;">Phone:</td>
+                              <td><h3 style="margin:0; margin-top:12px;">{{ $details['phone_number']}}</h3></td>
                            </tr>
                            <tr>
-                              <td><h6 class="text-inverse">Address:</td>
-                              <td><h6 class="text-inverse">{{ $details['address'] }}</h6></td>
+                              <td><h3 style="margin:0; margin-top:12px;">Address:</td>
+                              <td><h3 style="margin:0; margin-top:12px;">{{ $details['address'] }}</h3></td>
                            </tr>
                         </table>
                   </address>
@@ -186,24 +186,24 @@
                      <strong class="text-inverse" style="border-bottom:1px solid #23282c;">Order Information</strong><br>
                         <table class="mt-3" width="380px">
                            <tr>
-                              <td><h6 class="text-inverse">Package Name:</h6></td>
-                              <td><h6 class="text-inverse">{{ $details['package_name'] }}</h6></td>
+                              <td><h3 style="margin:0; margin-top:12px;">Package Name:</h3></td>
+                              <td><h3 style="margin:0; margin-top:12px;">{{ $details['package_name'] }}</h3></td>
                            </tr>
                            <tr>
-                              <td><h6 class="text-inverse">Payment_method:</td>
-                              <td><h6 class="text-inverse">{{ $details['payment_method'] }}</h6></td>
+                              <td><h3 style="margin:0; margin-top:12px;">Payment_method:</h3></td>
+                              <td><h3 style="margin:0; margin-top:12px;">{{ $details['payment_method'] }}</h3></td>
                            </tr>
                            <tr>
-                              <td><h6 class="text-inverse">Price:</td>
-                              <td><h6 class="text-inverse">{{ $details['price'] }}</h6></td>
+                              <td><h3 class="text-inverse">Price:</h3></td>
+                              <td><h3 style="margin:0; margin-top:12px;">{{ $details['price'] }}</h3></td>
                            </tr>
                            <tr>
-                              <td><h6 class="text-inverse">Sub Total:</td>
-                              <td><h6 class="text-inverse">{{ $details['sub_total'] }}</h6></td>
+                              <td><h3 style="margin:0; margin-top:12px;">Sub Total:</h3></td>
+                              <td><h3 style="margin:0; margin-top:12px;">{{ $details['sub_total'] }}</h3></td>
                            </tr>
                            <tr>
-                              <td><h6 class="text-inverse">Total:</td>
-                              <td><h6 class="text-inverse">{{ $details['total'] }}</h6></td>
+                              <td><h3 style="margin:0; margin-top:12px;">Total:</h3></td>
+                              <td><h3 style="margin:0; margin-top:12px;">{{ $details['total'] }}</h3></td>
                            </tr>
                         </table>
                   </address>

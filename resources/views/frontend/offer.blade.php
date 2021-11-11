@@ -39,26 +39,33 @@
 
             <div class="col-6 ps-5">
                 <h3 class="fw-bolder" style="color: #E84C4C">{{$package->name}}</h3>
-                <p>{{ $package->days }} Days &nbsp;&nbsp; {{ $package->night }} Nights</p>
+                <p>
+                  @if($package->days == null)
+                  @else
+                    {{ $package->days }} Days
+                  @endif
+
+                  @if($package->night == null)
+                  @else
+                    &nbsp;&nbsp; {{ $package->night }} Nights
+                  @endif
+                </p>
 
 
                 <div class="my-4">
                     <h5 class="mb-3">What's Included</h5>
 
                     <ul class="included">
-                        <li>Double room in 3* beach hotel</li>
-                        <li>Daily Breakfast and Dinner</li>
-                        <li>Return Speedboat Transfers</li>
-                        <li>Sea water swimming pool</li>
-                        <li>Snorkeling by Dhoni</li>
-                        <li>Kayaking</li>
+                        @foreach(json_decode($package->points) as $point)
+                          <li>{{$point->name}}</li>
+                        @endforeach
                     </ul>
                 </div>
 
 
                 <div class="mb-4">
                     <h5 class="mb-3">Description / Additional Note</h5>
-                    <div class="ms-4" style="color: rgb(0, 0, 0, 0.6); font-size: 0.8rem;">{!! $package->description !!}</div>
+                    <div class="ms-4" style="color: rgb(0, 0, 0, 0.6); font-size: 0.8rem;"><p>{{ $package->description }}</p></div>
                 </div>
 
                 <div>
@@ -66,11 +73,11 @@
 
                     <div class="row">
                         <div class="col-6">
-                            <button class="inquire">INQUIRE</button>
+                            <button class="inquire"  data-toggle="modal" data-target="#inquire">INQUIRE</button>
                         </div>
 
                         <div class="col-6">
-                            <button class="pay">PAY NOW</button>
+                            <button class="pay" data-toggle="modal" data-target="#paynow">PAY NOW</button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +90,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
 
-            <form action="{{route('frontend.solo_package.inquire')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('frontend.offer.inquire')}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
                 <div class="modal-header text-white" style="background-color: #1D5001;">
                   <h5 class="modal-title" id="inquire-modal">Send an Inquire</h5>
@@ -168,7 +175,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
 
-            <form action="{{route('frontend.solo_package.pay')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('frontend.offer.pay')}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
                 <div class="modal-header text-white" style="background-color: #1D5001;">
                   <h5 class="modal-title" id="inquire-modal">Pay Now</h5>

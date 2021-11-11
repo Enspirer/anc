@@ -18,6 +18,7 @@ class CreatePackagesTable extends Migration
             $table->text('name');
             $table->text('image');
             $table->text('description')->nullable();
+            $table->text('points')->nullable();
             $table->text('price');
             $table->text('status');
             $table->integer('order');
