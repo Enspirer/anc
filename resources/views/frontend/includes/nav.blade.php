@@ -2,17 +2,17 @@
     <div class="header-upper">
         <div class="layout-row">
             <aside class="caps sub-font-reg">
-                <a href="">Home</a>
-                <a href="about-us">About Us</a>
-                <a href="contact-us">Contact Us</a>
-                <a href="gallery">Gallery</a>
+                <a href="https://wearesrilankan.org/">Home</a>
+                <a href="https://wearesrilankan.org/about-us">About Us</a>
+                <a href="https://wearesrilankan.org/contact-us">Contact Us</a>
+                <a href="https://wearesrilankan.org/gallery">Gallery</a>
             </aside>
             <aside class="header-social-icons layout-row layout-align-end center">
-                <a href="https://www.facebook.com/amcholidays/" target="_blank" class="fab fa-facebook-f" 
+                <a href="https://www.facebook.com/amcholidays/" target="_blank" class="fab fa-facebook-f"
                 style="display: inline-block; min-width: 25px; min-height: 25px; -webkit-border-radius: 50%; border-radius: 50%; background-color: #0054a6; text-align: center;
                     line-height: 25px; color:white; overflow: hidden; font-size:11px">
                 </a>
-                <a href="https://twitter.com/AMC_Holidays" target="_blank" class="fab fa-twitter ml-1" 
+                <a href="https://twitter.com/AMC_Holidays" target="_blank" class="fab fa-twitter ml-1"
                 style="display: inline-block; min-width: 25px; min-height: 25px; -webkit-border-radius: 50%; border-radius: 50%; background-color: #00aeef; text-align: center;
                     line-height: 25px; color:white; overflow: hidden; font-size:11px">
                 </a>
@@ -25,14 +25,14 @@
         </div>
     </div>
     <div class="header-nav layout-row">
-        <a href="about-sri-lanka">About sri lanka</a>
-        <a href="inbound">Inbound</a>
-        <a href="outbound">Outbound</a>
-        <a href="" class="site-logo">
+        <a href="https://wearesrilankan.org/about-sri-lanka">About sri lanka</a>
+        <a href="https://wearesrilankan.org/inbound">Inbound</a>
+        <a href="https://wearesrilankan.org/outbound">Outbound</a>
+        <a href="https://wearesrilankan.org/" class="site-logo">
 		<img src="{{url('img/site-logo.png')}}"/></a>
-        <a href="testimonials">Testimonials</a>
-        <a href="news">News</a>
-        <a href="promotions">Promotions</a>
+        <a href="https://wearesrilankan.org/testimonials">Testimonials</a>
+        <a href="https://wearesrilankan.org/news">News</a>
+        <a href="https://wearesrilankan.org/promotions">Promotions</a>
     </div>
     <div class="mob-nav">
         <div class="tp-mob layout-row">
